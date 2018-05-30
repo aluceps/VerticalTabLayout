@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/tab"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:background="#ededed"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vpager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <q.rorbin.verticaltablayout.VerticalTabLayout
+            android:id="@+id/vtab"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:paddingBottom="20dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="20dp"
+            app:indicator_color="#5000"
+            app:indicator_corners="30dp"
+            app:indicator_gravity="fill"
+            app:tab_mode="fixed"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <me.aluceps.verticaltablayout.CustomViewPager
+        android:id="@+id/vpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tab"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>
